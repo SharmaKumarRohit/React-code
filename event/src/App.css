@@ -1,0 +1,9 @@
+.App {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Greeting {
+  background-color: #444;
+  color: #fff;
+  padding: 1rem;
+}
