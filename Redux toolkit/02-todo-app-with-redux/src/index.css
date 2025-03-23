@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --hue: 210;
+  --color-parimary: hsl(var(--hue), 11%, 10%);
+  --color-secondary: hsl(var(--hue), 17%, 98%);
+  --color-0: hsl(var(--hue), 16%, 93%);
+  --color-1: hsl(var(--hue), 14%, 89%);
+  --color-2: hsl(var(--hue), 14%, 83%);
+  --color-3: hsl(var(--hue), 11%, 71%);
+  --color-4: hsl(208, 7%, 46%);
+  --color-5: hsl(var(--hue), 9%, 31%);
+  --color-6: hsl(var(--hue), 10%, 23%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: var(--color-parimary);
+  color: var(--color-secondary);
+  /* position: relative; */
+}
+
+.container {
+  max-width: 1280px;
+  width: 60%;
+  margin: 2rem auto;
+}
+
+h1 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.8rem;
+  color: var(--color-3);
+  font-weight: 500;
+}
+
+form {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 100px;
+  padding: calc(100px - 78px) 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 20%, #171a1c) 80%;
+  display: grid;
+  grid-template-columns: 1fr 0.1fr;
+  gap: 10px;
+  z-index: 999;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+input[type="text"],
+.btn-form {
+  border-radius: 10px;
+  background-color: var(--color-parimary);
+  color: var(--color-secondary);
+  font-weight: 500;
+  font-size: 1.5rem;
+  border: 1px solid var(--color-3);
+}
+
+input[type="text"] {
+  padding: 0 1.6rem;
+}
+
+.todo__list {
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.single__todo {
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem;
+}
+
+.title__todo {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-size: 1.8rem;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #818cf8;
+}
+
+.delete__todo {
+  background-color: hsl(349, 14%, 24%);
+  color: hsl(349, 100%, 80%);
+  padding: 0.5rem;
+  font-size: 0.1rem;
+  border-radius: 5px;
+}
+
+.active__todo {
+  border: 1px solid var(--color-3);
+}
+
+.deActive__todo {
+  border: 1px solid var(--color-4);
+}
+
+.title__deActive {
+  color: var(--color-4);
+}
+
+@media screen and (max-width: 900px) {
+  .container,
+  form {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 640px) {
+  .container {
+    width: 90%;
+  }
+  form {
+    width: 90%;
+    padding: calc(100px - 76px) 0;
+    grid-template-columns: 1fr 0.2fr;
+  }
+  .single__todo {
+    padding: 1.4rem;
+  }
+  .title__todo {
+    gap: 1.4rem;
+    font-size: 1.6rem;
+  }
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+  }
+}

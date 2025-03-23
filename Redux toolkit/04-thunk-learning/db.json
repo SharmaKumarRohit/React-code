@@ -1,0 +1,14 @@
+{
+  "todos": [
+    {
+      "id": "c6ab",
+      "title": "Book ticket",
+      "completed": true
+    },
+    {
+      "id": "4903",
+      "title": "Book return ticket",
+      "completed": false
+    }
+  ]
+}
