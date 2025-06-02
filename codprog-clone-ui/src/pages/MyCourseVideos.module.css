@@ -1,0 +1,84 @@
+.myCourseSection {
+  display: flex;
+  margin-top: calc(var(--navbar-height) + 2rem);
+  margin-bottom: 2rem;
+  height: calc(100vh - (var(--navbar-height) + 2rem));
+  background-color: hsl(var(--hue-color), 22%, 15%);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.playlist {
+  width: 300px;
+  height: 100%;
+  overflow-y: auto;
+  padding: 1.5rem;
+  background-color: hsl(var(--hue-color), 27%, 20%);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.module h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--purple-color);
+}
+
+.playlist li {
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: var(--duration) ease-in-out;
+  font-size: 1rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 6px;
+  list-style: none;
+}
+
+.playlist li:hover {
+  background-color: hsl(var(--hue-color), 24%, 29%);
+}
+
+.activeVideo {
+  background-color: hsl(var(--hue-color), 30%, 42%);
+  font-weight: bold;
+}
+
+.videoContainer {
+  width: calc(100% - 300px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(var(--hue-color), 15%, 8%);
+}
+
+.video {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1200px) {
+  .myCourseSection {
+    flex-direction: column;
+  }
+
+  .playlist {
+    width: 100%;
+    height: auto;
+    order: 1;
+    margin-top: 1rem;
+  }
+
+  .videoContainer {
+    width: 100%;
+    order: 0;
+    min-height: 70vh;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .videoContainer {
+    min-height: 50vh;
+  }
+}

@@ -1,0 +1,92 @@
+.header {
+  margin-top: calc(var(--navbar-height) + 2rem);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_content {
+  width: 55%;
+}
+
+.course_desc {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: var(--text-color-gray);
+}
+
+.btn_container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.course_btn {
+  background-color: var(--dark-purple-color);
+  padding: 0.75rem 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.course_btn:hover {
+  background-color: var(--dark-purple-light);
+}
+
+.course_img {
+  width: 350px;
+}
+
+.curriculum {
+  font-size: 3.4rem;
+  line-height: 1.2;
+}
+
+.curriculum_container {
+  margin: calc(var(--navbar-height)) 0;
+}
+
+.curriculum_content {
+  margin: 2rem 0;
+  padding: 0 2rem;
+  border-left: 6px solid #efefef;
+}
+
+.chapter {
+  color: var(--color-gray);
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 900px) {
+  .header {
+    justify-content: center;
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  .header_content {
+    width: 100%;
+    text-align: center;
+  }
+  .btn_container {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .course_desc {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+  .course_img {
+    width: 70%;
+  }
+  .btn_container {
+    flex-direction: column;
+  }
+  .curriculum {
+    font-size: 2rem;
+  }
+  .chapter_name {
+    font-size: 1.2rem;
+  }
+}

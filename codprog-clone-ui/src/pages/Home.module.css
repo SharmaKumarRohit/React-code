@@ -1,0 +1,148 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: calc(var(--navbar-height) + 4rem);
+}
+
+.hero_image {
+  display: inline-block;
+  width: 30%;
+}
+
+.hero_heading {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.line {
+  border-bottom: 2px solid var(--green-color);
+}
+
+.hero_sub_heading {
+  font-size: 1.4rem;
+  margin-top: 0;
+  color: var(--text-color-gray);
+}
+
+.home_btn {
+  display: inline-block;
+  background-color: var(--dark-purple-color);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color var(--duration) ease-in;
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.home_btn:hover {
+  background-color: var(--dark-purple-light);
+}
+
+.course_section {
+  margin-top: 4rem;
+}
+
+.course_heading {
+  font-size: 2.2rem;
+  color: var(--text-color-gray);
+  text-align: center;
+  position: relative;
+}
+
+.course_heading::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -0.45rem;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 1.5px;
+  background-color: var(--text-color-gray);
+}
+
+.course_cards {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.course_card {
+  background-color: var(--card-bg);
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  border-radius: 10px;
+}
+
+.course_img {
+  display: block;
+  width: 65%;
+  margin: auto;
+}
+
+.name,
+.price,
+.description {
+  font-size: 1.1rem;
+}
+
+.name,
+.price {
+  font-weight: 600;
+}
+
+@media screen and (max-width: 900px) {
+  .hero {
+    margin-top: calc(var(--navbar-height) + 3rem);
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero_content {
+    text-align: center;
+  }
+  .hero_image {
+    width: 60%;
+  }
+  .hero_heading {
+    font-size: 2rem;
+  }
+  .hero_sub_heading {
+    font-size: 1.25rem;
+  }
+  .course_section {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .hero_image {
+    width: 100%;
+  }
+  .home_btn {
+    display: block;
+  }
+  .course_heading {
+    font-size: 1.85rem;
+    line-height: 1.15;
+  }
+  .course_heading::after {
+    bottom: -0.85rem;
+  }
+  .course_cards {
+    margin-bottom: 1.35rem;
+    gap: 1.35rem;
+  }
+  .course_card {
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,32 @@
+.payment_container {
+  margin-top: calc(var(--navbar-height) + 2rem);
+  min-height: calc(100vh - (var(--navbar-height) + 2rem + 109px));
+}
+.error_message {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.title {
+  font-size: 1.3rem;
+  margin-bottom: 1.4rem;
+  line-height: 1;
+  color: var(--text-color-gray2);
+}
+
+.title span {
+  color: var(--purple-color);
+}
+
+@media screen and (max-width: 640px) {
+  .error_container {
+    min-height: calc(100vh - (var(--navbar-height) + 2rem + 117px));
+  }
+  .error_message {
+    font-size: 1.8rem;
+  }
+  .title {
+    text-align: center;
+    line-height: 1.4;
+  }
+}

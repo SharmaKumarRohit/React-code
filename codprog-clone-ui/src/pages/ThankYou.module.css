@@ -1,0 +1,40 @@
+.thankyou_container {
+  margin-top: calc(var(--navbar-height) + 2rem);
+  height: calc(100vh - (var(--navbar-height) + 2rem + 109px));
+}
+
+.thankyou_content {
+  text-align: center;
+  padding: 3rem 0.75rem;
+  background-color: var(--text-color);
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 3rem auto;
+}
+
+.link {
+  color: var(--purple-color);
+  font-weight: 600;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #1a202c;
+  line-height: 1.2;
+}
+
+.message {
+  font-size: 1.25rem;
+  color: #4a5568;
+}
+
+@media screen and (max-width: 640px) {
+  .thankyou_container {
+    height: calc(100vh - (var(--navbar-height) + 2rem + 117px));
+  }
+}

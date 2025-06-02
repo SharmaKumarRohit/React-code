@@ -1,0 +1,26 @@
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.icon {
+  height: 1.4rem;
+  width: 1.4rem;
+  animation: spin 1s linear infinite;
+  stroke: var(--text-color);
+}
+
+.loading-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1rem;
+  color: var(--text-color);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,150 @@
+.form_container {
+  width: 50%;
+  margin: auto;
+  margin-top: calc(var(--navbar-height) + 4rem);
+  min-height: calc(100vh - 237px);
+}
+
+.form_message h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.form_message p {
+  font-size: 1.2rem;
+  color: var(--color-gray);
+}
+
+.input_group {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.input_group label,
+.input_group input {
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.input_group label {
+  position: absolute;
+  top: 50%;
+  left: 0.8rem;
+  transform: translateY(-50%);
+  padding: 0 5px;
+  pointer-events: none;
+  transition: 0.4s;
+}
+
+.input_group input {
+  width: 100%;
+  padding: 1.15rem 0.8rem;
+  background: transparent;
+  border: 2px solid var(--color-gray);
+  outline: none;
+  border-radius: 5px;
+}
+
+.input_group input:hover {
+  border: 2px solid var(--text-color);
+}
+
+.input_group input:focus ~ label,
+.input_group input:valid ~ label {
+  top: 0;
+  font-size: 12px;
+  background: var(--bg-color);
+}
+
+.toggle {
+  position: absolute;
+  top: 50%;
+  right: 0.8rem;
+  transform: translateY(-50%);
+}
+
+.input_btn {
+  padding: 1.15rem;
+  width: 100%;
+  border-radius: 5px;
+  background-color: var(--dark-purple-color);
+  border: none;
+  outline: none;
+  color: var(--text-color);
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.input_btn:hover {
+  background-color: var(--dark-purple-light);
+}
+
+.account {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.account p {
+  color: var(--color-gray);
+}
+
+.account p span a {
+  color: var(--purple-color);
+  font-weight: 600;
+}
+
+.errorMessage {
+  background-color: hsl(349, 52%, 61%);
+}
+
+.successMessage {
+  background-color: hsl(119, 52%, 61%);
+}
+
+.errorMessage,
+.successMessage {
+  color: #000;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  padding: 0.4rem;
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.errorMessage img {
+  width: 1em;
+}
+
+@media screen and (max-width: 900px) {
+  .form_container {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .form_container {
+    width: 100%;
+    margin-top: calc(var(--navbar-height) + 2rem);
+    min-height: calc(100vh - 213px);
+  }
+  .form_message h2 {
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+  .form_message p {
+    font-size: 1rem;
+  }
+  .account {
+    font-size: 1.15rem;
+  }
+  .errorMessage,
+  .successMessage {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+}

@@ -1,0 +1,40 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  --hue-color: 266;
+  --green-hue: 86;
+  --bg-color: hsl(var(--hue-color), 15%, 17%);
+  --purple-color: hsl(var(--hue-color), 100%, 78%);
+  --dark-purple-color: hsl(var(--hue-color), 100%, 53%);
+  --dark-purple-light: hsl(var(--hue-color), 65%, 53%);
+  --text-color: hsl(var(--hue-color), 50%, 100%);
+  --green-color: hsl(var(--green-hue), 100%, 78%);
+  --text-color-gray: hsl(var(--hue-color), 20%, 90%);
+  --text-color-gray2: hsl(var(--hue-color), 10%, 90%);
+  --color-gray: hsl(var(--hue-color), 0%, 70%);
+  --card-bg: hsl(var(--hue-color), 21%, 24%);
+  --purple: rgb(196, 129, 224);
+  --violet: rgb(117, 86, 170);
+  --pink: rgb(244, 143, 177);
+  --duration: 0.2s;
+  --navbar-height: 64px;
+  --scroll-padding-top: var(--navbar-height);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
