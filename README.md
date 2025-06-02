@@ -1,5 +1,5 @@
 # React-code
-In Search Movie Project, also add ".env" file in the root director floader and write "VITE_OMDB_API_KEY=56146015" in the ".env" file.
+In Search Movie Project, also add ".env" file in the root director folder and write "VITE_OMDB_API_KEY=56146015" in the ".env" file.
 
 # codeprog clone API_KEYS Here
 <h3>These keys put into contants.js file inside src folder.</h3>
