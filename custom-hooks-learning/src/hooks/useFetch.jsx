@@ -1,45 +1,42 @@
 import { useEffect, useState } from "react";
+
 function useFetch(url) {
   const [data, setData] = useState(null);
-  const [isPending, setIsPending] = useState(false);
+  const [isPending, setIsPending] = useState(true);
   const [error, setError] = useState(null);
+
   useEffect(() => {
-    if (!url) {
-      setData(null);
-      setIsPending(false);
-      setError(null);
-      return;
-    }
     const controller = new AbortController();
-    let isCurrent = true;
-    setIsPending(true);
+    const { signal } = controller;
+
     async function fetchData() {
+      setIsPending(true);
+      setError(null);
+
       try {
-        const res = await fetch(url, { signal: controller.signal });
+        const res = await fetch(url, { signal });
         if (!res.ok) {
-          throw Error("Something Went Wrong");
+          throw new Error(`Error: ${res.status}`);
         }
-        const resData = await res.json();
-        if (isCurrent) {
-          setData(resData);
-          setError(null);
-        }
+
+        const data = await res.json();
+        setData(data);
       } catch (error) {
-        if (isCurrent && error.name !== "AbortError") {
+        if (error.name !== "AbortError") {
           setError(error.message);
         }
       } finally {
-        if (isCurrent) {
+        if (!signal.aborted) {
           setIsPending(false);
         }
       }
     }
+
     fetchData();
-    return () => {
-      isCurrent = false;
-      controller.abort();
-    };
-  }, []);
+
+    return () => controller.abort();
+  }, [url]);
+
   return { data, isPending, error };
 }
 
